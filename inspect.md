@@ -8,14 +8,14 @@ Dumps Lua tables in human-readable format. The output is meant to be used for de
 
 Features:
 
-  * "Array-like" tables are rendered horizontally:
-  * "Dictionary-like" tables are rendered with one element per line:
+  * "Array-like" tables are rendered horizontally.
+  * "Dictionary-like" tables are rendered with one element per line.
   * The keys are sorted alphanumerically when possible.
   * "Hybrid" tables have the array part on the first line, and the dictionary part just below.
   * Subtables are indented with two spaces per level.
-  * Functions, userdata and any other custom types from Luajit are simply as `<function x>`, `<userdata x>`, etc.
-  * If the table has a metatable, inspect will include it at the end, in a special field called `<metatable>`.
-  * `inspect` can handle tables with loops inside them. It prints `<id>` right before the table is printed out the 
+  * Functions, userdata and cdata print as `<function x>`, `<userdata x>`, etc.
+  * Metatables are added at the end, in a special field called `<metatable>`.
+  * can handle tables with loops inside them. Prints `<id>` right before the table is printed out the 
   first time, and replaces the whole table with `<table id>` from then on, preventing infinite loops.
 
 ### Options
