@@ -7,6 +7,7 @@ tagline: table dump
 Dumps Lua tables in human-readable format. The output is meant to be used for debugging, not serialization (use [pp] for that).
 
 Features:
+
   * "Array-like" tables are rendered horizontally:
   * "Dictionary-like" tables are rendered with one element per line:
   * The keys are sorted alphanumerically when possible.
@@ -14,7 +15,8 @@ Features:
   * Subtables are indented with two spaces per level.
   * Functions, userdata and any other custom types from Luajit are simply as `<function x>`, `<userdata x>`, etc.
   * If the table has a metatable, inspect will include it at the end, in a special field called `<metatable>`.
-  * `inspect` can handle tables with loops inside them. It prints `<id>` right before the table is printed out the first time, and replaces the whole table with `<table id>` from then on, preventing infinite loops.
+  * `inspect` can handle tables with loops inside them. It prints `<id>` right before the table is printed out the 
+  first time, and replaces the whole table with `<table id>` from then on, preventing infinite loops.
 
 ### Options
 
