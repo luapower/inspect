@@ -4,7 +4,7 @@ tagline: table dump
 
 ## `require'inspect'(t[, options])`
 
-Dumps Lua tables in human-readable format. The output is meant to be used for debugging, not serialization (use [pp] for that).
+Dumps Lua tables in human-readable format. The output is for debugging, not serialization (use [pp] for that).
 
 Features:
 
