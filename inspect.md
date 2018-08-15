@@ -8,14 +8,14 @@ Dumps Lua tables in human-readable format. The output is meant to be used for de
 
 Features:
 
-  * "Array-like" tables are rendered horizontally.
-  * "Dictionary-like" tables are rendered with one element per line.
-  * The keys are sorted alphanumerically when possible.
-  * "Hybrid" tables have the array part on the first line, and the dictionary part just below.
-  * Subtables are indented with two spaces per level.
-  * Functions, userdata and cdata print as `<function x>`, `<userdata x>`, etc.
-  * Metatables are added at the end, in a special field called `<metatable>`.
-  * can handle tables with loops inside them. Prints `<id>` right before the table is printed out the 
+  * array-like tables are rendered horizontally.
+  * dictionary-like tables are rendered with one element per line.
+  * mixed tables have the array part on the first line, and the dictionary part just below.
+  * keys are sorted alphanumerically when possible.
+  * subtables are indented with two spaces per level (configurable).
+  * functions, userdata and cdata print as `<function x>`, `<userdata x>`, etc.
+  * metatables are added at the end, in a special field called `<metatable>`.
+  * handles recursive references: prints `<id>` right before the table is printed out the 
   first time, and replaces the whole table with `<table id>` from then on, preventing infinite loops.
 
 ### Options
